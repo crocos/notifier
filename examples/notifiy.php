@@ -3,9 +3,7 @@
  *
  */
 
-set_include_path(dirname(__DIR__) . '/src' . PATH_SEPARATOR . get_include_path());
 require_once dirname(__DIR__) . '/vendor/SplClassLoader.php';
-
 $cl = new SplClassLoader('Crocos', dirname(__DIR__) . '/src');
 $cl->register();
 
@@ -28,7 +26,6 @@ $config = array(
         ),
     ),
 );
-
 
 $notifier = new Notifier($config);
 
